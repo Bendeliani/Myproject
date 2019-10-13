@@ -1,0 +1,19 @@
+.box {
+  width: 3300px;
+  height: 300px;
+  margin: 0 auto;
+  background: #cccccc;
+  position: relative;
+  z-index: 1;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    
+}
+
+

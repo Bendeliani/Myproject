@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.Slider {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.Slider::before {
+  content: "";
+}
+
+.Slider__dots {
+  position: absolute;
+  width: 90px;
+  left: 0%;
+  right: 0%;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.Slider__dot {
+  width: 20px;
+  height: 20px;
+  border: 2px solid red;
+  border-radius: 50%;
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.Slider__dot.active {
+  background: red;
+}
+
+.Slider > input[type="radio"] {
+  position: absolute;
+  z-index: -1;
+}
+
+#slide_1:checked ~ .Slider__dots > [for="slide_1"],
+#slide_2:checked ~ .Slider__dots > [for="slide_2"],
+#slide_3:checked ~ .Slider__dots > [for="slide_3"] {
+  background: red;
+}
+/* 
+#slide_1:checked ~ .Slider__current {
+  background: url(https://cinerp.com/media/slider/slides/ddc9410b-1a5e-4022-b554-ecb0f4ea834b1200x200.jpg);
+}
+#slide_2:checked ~ .Slider__current {
+  background: url(https://cinerp.com/media/slider/slides/f7e8985e-b4ca-4929-81d4-c9dcf720365cotx.jpg);
+}
+
+#slide_3:checked ~ .Slider__current {
+  background: url(https://cinerp.com/media/slider/slides/2e894cec-51a8-4bf7-bc39-4d15c52fba78stu.jpg);
+} */
+
+.Slider__current {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 300ms ease-in;
+  animation-name: slider;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slider {
+  0% {
+    background: url("https://cinerp.com/media/slider/slides/ddc9410b-1a5e-4022-b554-ecb0f4ea834b1200x200.jpg");
+  }
+  33.33% {
+    background: url("https://cinerp.com/media/slider/slides/f7e8985e-b4ca-4929-81d4-c9dcf720365cotx.jpg");
+  }
+  66.66% {
+    background: url("https://cinerp.com/media/slider/slides/2e894cec-51a8-4bf7-bc39-4d15c52fba78stu.jpg");
+  }
+}
