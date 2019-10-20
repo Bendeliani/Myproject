@@ -6,7 +6,7 @@
 
 // if (number > MIN && number < MAX) {
 //   alert("You Won!...");
-// } 
+// }
 // else if (number < MAX && number % 2 == 1){
 //     alert ("WOW!...")
 // }
@@ -18,16 +18,11 @@
 // const result = ( guess == number ) ? "Moige!..." : "Waage!...";
 // alert(result)
 
-let text = prmpt ("username");
-if (text == "Admin"){
-prompt ("password");
+let text = prmpt("username");
+if (text == "Admin") {
+  prompt("password");
+} else if (text != "Admin") {
+  prompt("I dont know you");
+} else {
+  alert("Cancel");
 }
-else if (text != "Admin"){
-    prompt ("I dont know you");
-}
-else {
-    alert("Cancel")
-}
-
-
-
